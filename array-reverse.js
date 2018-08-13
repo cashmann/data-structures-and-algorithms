@@ -1,5 +1,5 @@
 arrayReverse = (arr)=>{
-  if(typeof(arr)==='object'){
+  if(Array.isArray(arr)){
     var x = 0;
     var newArr = [];
     for(var i=(arr.length-1); i>=0; i--){
