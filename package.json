@@ -4,6 +4,7 @@
   "description": "",
   "main": "array-reverse.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "jest"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/cashmann/data-structures-and-algorithms#readme",
   "devDependencies": {
+    "eslint": "^5.3.0",
     "jest": "^23.5.0"
   }
 }
