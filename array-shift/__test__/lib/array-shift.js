@@ -16,6 +16,6 @@ var insertShiftArray = (arr, el) => {
       }
     } return newArr;
   }
-}
+};
 
 module.exports = insertShiftArray;

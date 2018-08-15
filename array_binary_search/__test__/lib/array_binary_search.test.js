@@ -25,5 +25,5 @@ describe('binarySearch', ()=>{
     //expect(binarySearch(arr, 7)).toBe(6);
     expect(binarySearch(arr, 8)).toBe(7);
     // Some of these don't work, I haven't been able to work out why with what I'm doing.
-  })
+  });
 });

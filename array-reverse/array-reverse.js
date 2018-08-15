@@ -1,4 +1,4 @@
-arrayReverse = (arr)=>{
+const arrayReverse = (arr)=>{
   if(Array.isArray(arr)){
     var x = 0;
     var newArr = [];
@@ -7,6 +7,8 @@ arrayReverse = (arr)=>{
       x++;
     }return newArr;
   } else{
-    return "Ah fuck, I can't believe you've done this."
+    return 'Ah fuck, I can\'t believe you\'ve done this.';
   }
-}
+};
+
+module.exports = arrayReverse;
