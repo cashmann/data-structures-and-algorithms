@@ -4,6 +4,7 @@
   "description": "",
   "main": "array-reverse.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "jest"
   },
   "repository": {
