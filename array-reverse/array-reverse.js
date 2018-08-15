@@ -14,9 +14,9 @@ const arrayReverse = (arr)=>{
       x++;
     }return newArr;
   } else{
-    return "oops"
+    return 'oops';
   }
-}
+};
 
 module.exports = arrayReverse;
 

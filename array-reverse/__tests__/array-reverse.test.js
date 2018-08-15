@@ -25,9 +25,9 @@ describe('arrayReverse', () => {
     var input = [];
     var reversed = arrayReverse(input);
 
-    expect(reversed).toEqual(input)
+    expect(reversed).toEqual(input);
     expect(reversed).not.toBe(input);
-  })
+  });
 
   it('complains about non-array', () => {
     expect(arrayReverse({})).toBe('oops');
@@ -36,5 +36,5 @@ describe('arrayReverse', () => {
     expect(arrayReverse()).toBe('oops');
     expect(arrayReverse(1)).toBe('oops');
     expect(arrayReverse('[Object object]')).toBe('oops');
-  })
+  });
 });
