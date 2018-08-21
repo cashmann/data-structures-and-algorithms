@@ -59,5 +59,13 @@ describe('linkedList', ()=>{
       list.insertBefore('hola', 6);
       expect(list.head.next.data).toBe(6);
     });
+    it('can find a node from a given position from the end of a list', ()=>{
+      var list = new linkedList();
+      list.insert('hi');
+      list.insert('bye');
+      list.insert('hola');
+      list.append('pfft');
+      expect(list.findFromEnd(1).data).toBe('hi');
+    });
   });
 });
