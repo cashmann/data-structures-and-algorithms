@@ -81,6 +81,21 @@ class LinkedList{
     } while(current);
     return false;
   }
+  findFromEnd(k){
+    if(typeof(k)!=='number') return `Input must be a number.`;
+    let current = this.head;
+    let endPos = 1;
+    while(current.next){
+      current = current.next;
+      endPos++;
+    }
+    current = this.head;
+    for(let i=1; i<endPos-k; i++){
+      current = current.next;
+      
+    }
+    return current;
+  }
 }
 
 module.exports = LinkedList;
