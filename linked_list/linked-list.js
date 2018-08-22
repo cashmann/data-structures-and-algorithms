@@ -96,6 +96,22 @@ class LinkedList{
     }
     return current;
   }
+  merge(list){
+    if(!list.head){
+      throw new Error('Cannot merge non-list values');
+    }
+    let current1 = this.head;
+    let current2 = list.head;
+    while(current1 && current2){
+      let oldPosition = current2.next;
+      current2.next = current1.next;
+      current1.next = current2;
+      current1 = current2.next;
+      current2 = oldPosition;
+    }
+    console.log(this);
+    return this;
+  }
 }
 
 module.exports = LinkedList;
