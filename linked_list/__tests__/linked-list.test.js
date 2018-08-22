@@ -67,5 +67,18 @@ describe('linkedList', ()=>{
       list.append('pfft');
       expect(list.findFromEnd(1).data).toBe('hi');
     });
+    it('can merge a list into another list', ()=>{
+      var list = new linkedList();
+      list.insert('hi');
+      list.insert('bye');
+      list.insert('hola');
+      list.append('pfft');
+      var list2 = new linkedList();
+      list2.insert(1);
+      list2.insert(2);
+      list2.insert(3);
+      list.merge(list2);
+      expect(list.head.next.next.next.next.next.next.next).toBe(null);
+    });
   });
 });
