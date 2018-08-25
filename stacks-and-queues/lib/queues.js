@@ -25,10 +25,15 @@ class Queue{
     this.numberOfValues++;
   }
   dequeue(){
-    let target = this.head;
+    if(this.head === null){
+      return 'This queue is empty.';
+    }
     this.head = this.head.next;
-    this.head.prev = null;
-    return target.data;
+    if(this.head.prev){
+      this.head.prev = null;
+    } else{
+      return 'This queue is now empty.';
+    }
   }
 }
 
