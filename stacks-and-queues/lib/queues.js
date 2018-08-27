@@ -26,7 +26,7 @@ class Queue{
   }
   dequeue(){
     if(this.head === null){
-      return 'This queue is empty.';
+      throw new Error('This queue is empty.');
     }
     this.head = this.head.next;
     if(this.head.prev){
