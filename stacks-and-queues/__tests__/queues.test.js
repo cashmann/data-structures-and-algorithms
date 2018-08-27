@@ -22,6 +22,6 @@ describe('stack', ()=>{
     expect(queue.head.data).toBe(2);
     
     let emptyQueue = new Queue();
-    expect(emptyQueue.dequeue()).toBe('This queue is empty.');
+    expect(function(){emptyQueue.dequeue();}).toThrow(Error);
   });
 });
