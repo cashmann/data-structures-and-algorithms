@@ -2,7 +2,7 @@
 
 function mbv(str){
   if(!str || typeof str !== 'string'){
-    throw new Error('Input error. Please input a non-empty string string.');
+    throw new Error('Input error. Please input a non-empty string.');
   }
   let leftRoundCount = 0;
   let rightRoundCount = 0;
