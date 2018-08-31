@@ -52,4 +52,9 @@ describe('Binary Tree', ()=>{
     tree = tree.serialize();
     expect(tree[0]).toBe(7);
   });
+  it('can deserialize an array into a tree', ()=>{
+    let tree = new BinaryTree();
+    tree.deserialize([1,2,7,8]);
+    expect(tree.root.value).toBe(1);
+  });
 });
