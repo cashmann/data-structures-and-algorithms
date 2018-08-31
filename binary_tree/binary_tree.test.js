@@ -40,8 +40,25 @@ describe('Binary Tree', ()=>{
     expect(tree.find(3)).toBe('Value "3" not found.');
     tree.insert(3);
     expect(tree.find(3)).toBe(true);
+    console.log(tree);
+    expect(tree.root.left.value).toBe(3);
+    // Before:
+    //     7
+    //    / \
+    //  3    20
+    //      /
+    //     15
     tree.remove(7);
-    expect(tree.root.value).toBeDefined();
+    // After:
+    //     3
+    //      \
+    //       20
+    //      /
+    //     15
+    expect(tree.root.value).toBe(3);
+    expect(tree.root.left).toBe(null);
+    expect(tree.root.right).not.toBe(null);
+    expect(tree.root.right.value).toBe(20);
   });
   it('can serialize itself into an array', ()=>{
     let tree = new BinaryTree();
