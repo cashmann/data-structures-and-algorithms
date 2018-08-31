@@ -30,7 +30,7 @@ class BinaryTree{
           current = current.left;
         } else{
           current.left = leaf;
-          return;
+          return this;
         }
       }
       if(value > current.value){
@@ -38,7 +38,7 @@ class BinaryTree{
           current = current.right;
         } else{
           current.right = leaf;
-          return;
+          return this;
         }
       }
       else throw new Error('This value is already in the tree. No duplicate values.');
@@ -77,11 +77,20 @@ class BinaryTree{
       if(value === current.value){
         if(oldCurrent){
           if(direction === 'right'){
-            oldCurrent.right = current.right;
+            if(!current.right){
+              oldCurrent.right = null;
+            } else{
+              oldCurrent.right = current.right;
+            }
             this.insert(current.left);
             return;
           }else{
-            oldCurrent.left = current.left;
+            if(!current.left){
+              oldCurrent.left = null;
+            }
+            else{
+              oldCurrent.left = current.left;
+            }
             this.insert(current.right);
             return;
           }
