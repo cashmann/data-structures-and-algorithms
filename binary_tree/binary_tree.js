@@ -41,7 +41,7 @@ class BinaryTree{
           return this;
         }
       }
-      else throw new Error('This value is already in the tree. No duplicate values.');
+      else if( value === current.value) throw new Error('This value is already in the tree. No duplicate values.');
     } return this;
   }
   find(value){
