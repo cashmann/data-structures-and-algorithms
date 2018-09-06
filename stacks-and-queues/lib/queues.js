@@ -29,7 +29,7 @@ class Queue{
       throw new Error('This queue is empty.');
     }
     this.head = this.head.next;
-    if(this.head.prev){
+    if(this.head){
       this.head.prev = null;
     } else{
       return 'This queue is now empty.';
