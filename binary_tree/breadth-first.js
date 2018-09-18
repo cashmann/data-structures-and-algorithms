@@ -28,3 +28,26 @@ module.exports = (tree) =>{
   }
   return array;
 };
+
+
+/*var red = {'five': 34, 'four5': 59, 'three4': 31 };
+var green = {'five': 14, 'four5': 36, 'three4': 20};
+var blue = {'five': 16, 'four5': 44, 'three4': 28};
+
+function calc(color, rating, score){
+  let chance;
+  if (rating === 'five'){
+    chance = .03;
+  }
+  else if(rating === 'four5'){
+    chance = .61;
+  }
+  else{
+    chance = .94;
+    console.log(chance);
+  }
+  let multiplier = (1/color[rating])*chance;
+  console.log(multiplier);
+  let final = score*multiplier;
+  return final;
+}*/
