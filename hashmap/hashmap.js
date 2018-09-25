@@ -1,4 +1,5 @@
 'use strict';
+const LinkedList = require('../linked_list/linked-list');
 
 module.exports = class HashMap {
   constructor(capacity = 20) {
@@ -17,7 +18,17 @@ module.exports = class HashMap {
       hash += key.charCodeAt(i);
     }
 
-    //  x % y => some number between 0 and (y-1)
-    return hash; // For capacity of 20, we get some number between 0-19
+    return hash;
+  }
+  set(key, htValue) {
+    const hash = this._generateHash(key);
+
+    if (!this._buckets[hash]) {
+      this._buckets[hash] = new LinkedList({ key, htValue });
+      return this;
+    }
+
+    this._buckets[hash].append(new LinkedList({ key, htValue }));
+    return this;
   }
 };
