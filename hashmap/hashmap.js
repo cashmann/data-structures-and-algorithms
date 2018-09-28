@@ -24,7 +24,9 @@ module.exports = class HashMap {
     const hash = this._generateHash(key);
 
     if (!this._buckets[hash]) {
-      this._buckets[hash] = new LinkedList({ key, htValue });
+      this._buckets[hash] = new LinkedList();
+      this._buckets[hash].insert({ key, htValue });
+      console.log(this._buckets);
       return this;
     }
 

@@ -8,7 +8,11 @@ class Node{
 }
 
 class LinkedList{
-  constructor(){
+  constructor(arg){
+    if (arg){
+      this.head = arg;
+      this.itemCount = 1;
+    }
     this.head = null;
     this.itemCount = 0;
   }
