@@ -26,5 +26,38 @@ function quickSort(arr){
   return quickSort(left).concat(pivot, quickSort(right));
 }
 
+function quickSort2(arr, left=0, right=arr.length-1){
+  let pivot;
+  let partitionIndex;
+  console.log(arr);
+  console.log(left, right);
+  if(left < right){
+    pivot = right;
+    partitionIndex = partitionSort(arr, pivot, left, right);
+    quickSort2(arr, left, partitionIndex-1);
+    quickSort2(arr, partitionIndex+1, right);
+  }
+  return arr;
+}
 
-module.exports = quickSort;
+function partitionSort(arr, pivot, left, right){
+  let pivotVal = arr[pivot];
+  let partitionIndex = left;
+  for(let i = left; i<right; i++){
+    if(arr[i] < pivotVal){
+      swap(arr, i, partitionIndex);
+      partitionIndex++;
+    }
+  }
+  swap(arr, right, partitionIndex);
+  return partitionIndex;
+}
+
+function swap(arr, i, partitionIndex){
+  let t = arr[i];
+  arr[i] = arr[partitionIndex];
+  arr[partitionIndex] = t;
+}
+
+
+module.exports = quickSort2;

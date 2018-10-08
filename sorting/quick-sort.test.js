@@ -5,6 +5,7 @@ describe('quickSort', ()=>{
   it('sorts values', ()=>{
     let arr = [523,459,83,25,74,3,87,60,29,875];
     let res = quickSort(arr);
+    console.log(res);
     expect(res.length).toBe(arr.length);
     let arr2 = [];
     for(let i=0; i<29; i++){
