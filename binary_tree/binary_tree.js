@@ -5,6 +5,12 @@ class Node{
     this.left = null;
     this.right = null;
   }
+
+  // inspect() {
+  //   return `Node (${this.value}) ` +
+  //     (this.left ? `Left: { ${this.left.inspect()} } ` : '') +
+  //     (this.right ? `Right: { ${this.right.inspect()} } ` : '');
+  // }
 }
 
 class BinaryTree{
@@ -96,7 +102,9 @@ class BinaryTree{
           }
         } else{
           this.root = current.left;
+          console.log(this.root);
           this.insert(current.right);
+          console.log(this.root);
           return;
         }
       } else{
